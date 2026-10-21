@@ -1,0 +1,1263 @@
+{
+  "ads1115_16bit_i2c_driver": {
+    "ports": [
+      {
+        "name": "i2cclk",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "i2cclk"
+      },
+      {
+        "name": "reset",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "reset"
+      },
+      {
+        "name": "s_reset",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "s_reset"
+      },
+      {
+        "name": "ads1115_addr",
+        "type": {
+          "kind": "vec",
+          "left": "1",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "2"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "ads1115_addr"
+      },
+      {
+        "name": "ads1115_alert_rdy",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "ads1115_alert_rdy"
+      },
+      {
+        "name": "scl",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "scl"
+      },
+      {
+        "name": "sda",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "inout",
+        "key": "sda"
+      },
+      {
+        "name": "ads1115_input_mux",
+        "type": {
+          "kind": "vec",
+          "left": "7",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "8"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "ads1115_input_mux"
+      },
+      {
+        "name": "ads1115_input_fsr_pga",
+        "type": {
+          "kind": "vec",
+          "left": "23",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "24"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "ads1115_input_fsr_pga"
+      },
+      {
+        "name": "ads1115_input_dr",
+        "type": {
+          "kind": "vec",
+          "left": "23",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "24"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "ads1115_input_dr"
+      },
+      {
+        "name": "ads1115_uploadck",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "ads1115_uploadck"
+      },
+      {
+        "name": "ads1115_loadck",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "buffer",
+        "key": "ads1115_loadck"
+      },
+      {
+        "name": "ads1115upload",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "buffer",
+        "key": "ads1115upload"
+      },
+      {
+        "name": "ads1115_adc_16bit",
+        "type": {
+          "kind": "vec",
+          "left": "15",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "16"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "ads1115_adc_16bit"
+      },
+      {
+        "name": "ads1115_ok",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "ads1115_ok"
+      }
+    ],
+    "params": false
+  },
+  "e111_01_01_rom": {
+    "ports": [
+      {
+        "name": "addr",
+        "type": {
+          "kind": "int",
+          "w": "clog2((addr_length)+1)",
+          "lo": "0",
+          "hi": "addr_length"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "addr"
+      },
+      {
+        "name": "clk",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "clk"
+      },
+      {
+        "name": "q",
+        "type": {
+          "kind": "vec",
+          "left": "15",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "16"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "q"
+      },
+      {
+        "name": "qq",
+        "type": {
+          "kind": "vec",
+          "left": "15",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "16"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "qq"
+      }
+    ],
+    "params": true
+  },
+  "joystick_driver": {
+    "ports": [
+      {
+        "name": "joystick_clk",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "joystick_clk"
+      },
+      {
+        "name": "joystick_reset",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "joystick_reset"
+      },
+      {
+        "name": "ads1115_reset",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "ads1115_reset"
+      },
+      {
+        "name": "ads1115_ok",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "ads1115_ok"
+      },
+      {
+        "name": "vx",
+        "type": {
+          "kind": "int",
+          "w": "17",
+          "lo": "0",
+          "hi": "65536"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "vx"
+      },
+      {
+        "name": "vy",
+        "type": {
+          "kind": "int",
+          "w": "17",
+          "lo": "0",
+          "hi": "65536"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "vy"
+      },
+      {
+        "name": "sw",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "sw"
+      },
+      {
+        "name": "joystick_keys",
+        "type": {
+          "kind": "int",
+          "w": "6",
+          "lo": "0",
+          "hi": "63"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "buffer",
+        "key": "joystick_keys"
+      },
+      {
+        "name": "joystick_ok",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "buffer",
+        "key": "joystick_ok"
+      }
+    ],
+    "params": false
+  },
+  "k4x4": {
+    "ports": [
+      {
+        "name": "kf",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "kf"
+      },
+      {
+        "name": "reset",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "reset"
+      },
+      {
+        "name": "ki",
+        "type": {
+          "kind": "vec",
+          "left": "1",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "2"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "ki"
+      },
+      {
+        "name": "ko",
+        "type": {
+          "kind": "vec",
+          "left": "1",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "2"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "buffer",
+        "key": "ko"
+      },
+      {
+        "name": "kn",
+        "type": {
+          "kind": "int",
+          "w": "5",
+          "lo": "0",
+          "hi": "16"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "buffer",
+        "key": "kn"
+      },
+      {
+        "name": "kv",
+        "type": {
+          "kind": "int",
+          "w": "5",
+          "lo": "0",
+          "hi": "16"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "buffer",
+        "key": "kv"
+      },
+      {
+        "name": "kascii",
+        "type": {
+          "kind": "vec",
+          "left": "7",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "8"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "kascii"
+      },
+      {
+        "name": "kok",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "buffer",
+        "key": "kok"
+      },
+      {
+        "name": "koo",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "buffer",
+        "key": "koo"
+      }
+    ],
+    "params": false
+  },
+  "rs232_r4": {
+    "ports": [
+      {
+        "name": "clk",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "clk"
+      },
+      {
+        "name": "reset",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "reset"
+      },
+      {
+        "name": "dl",
+        "type": {
+          "kind": "vec",
+          "left": "1",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "2"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "dl"
+      },
+      {
+        "name": "parityn",
+        "type": {
+          "kind": "vec",
+          "left": "2",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "3"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "parityn"
+      },
+      {
+        "name": "stopn",
+        "type": {
+          "kind": "vec",
+          "left": "1",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "2"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "stopn"
+      },
+      {
+        "name": "f_set",
+        "type": {
+          "kind": "vec",
+          "left": "3",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "4"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "f_set"
+      },
+      {
+        "name": "status_s",
+        "type": {
+          "kind": "vec",
+          "left": "2",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "3"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "status_s"
+      },
+      {
+        "name": "rx_bbn",
+        "type": {
+          "kind": "int",
+          "w": "clog2(((txrd_buff + 1))+1)",
+          "lo": "0",
+          "hi": "(txrd_buff + 1)"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "buffer",
+        "key": "rx_bbn"
+      },
+      {
+        "name": "rx_r",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "rx_r"
+      },
+      {
+        "name": "rd",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "rd"
+      },
+      {
+        "name": "rxds",
+        "type": {
+          "kind": "vec",
+          "left": "7",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "8"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "rxds"
+      }
+    ],
+    "params": true
+  },
+  "rs232_t4": {
+    "ports": [
+      {
+        "name": "clk",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "clk"
+      },
+      {
+        "name": "reset",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "reset"
+      },
+      {
+        "name": "dl",
+        "type": {
+          "kind": "vec",
+          "left": "1",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "2"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "dl"
+      },
+      {
+        "name": "parityn",
+        "type": {
+          "kind": "vec",
+          "left": "2",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "3"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "parityn"
+      },
+      {
+        "name": "stopn",
+        "type": {
+          "kind": "vec",
+          "left": "1",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "2"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "stopn"
+      },
+      {
+        "name": "f_set",
+        "type": {
+          "kind": "vec",
+          "left": "3",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "4"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "f_set"
+      },
+      {
+        "name": "status_s",
+        "type": {
+          "kind": "vec",
+          "left": "1",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "2"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "status_s"
+      },
+      {
+        "name": "tx_w",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "tx_w"
+      },
+      {
+        "name": "txdata",
+        "type": {
+          "kind": "vec",
+          "left": "7",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "8"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "txdata"
+      },
+      {
+        "name": "tx",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "tx"
+      }
+    ],
+    "params": true
+  },
+  "st7735_spi_tft_lcd_4w_driver_3": {
+    "ports": [
+      {
+        "name": "st7735_clk",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "st7735_clk"
+      },
+      {
+        "name": "st7735_reset",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "st7735_reset"
+      },
+      {
+        "name": "st7735_res",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "st7735_res"
+      },
+      {
+        "name": "st7735_bls",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "st7735_bls"
+      },
+      {
+        "name": "dci",
+        "type": {
+          "kind": "vec",
+          "left": "1",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "2"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "dci"
+      },
+      {
+        "name": "cmpai",
+        "type": {
+          "kind": "vec",
+          "left": "15",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "16"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "cmpai"
+      },
+      {
+        "name": "cbi",
+        "type": {
+          "kind": "vec",
+          "left": "3",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "4"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "cbi"
+      },
+      {
+        "name": "fcri",
+        "type": {
+          "kind": "vec",
+          "left": "7",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "8"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "fcri"
+      },
+      {
+        "name": "fcgi",
+        "type": {
+          "kind": "vec",
+          "left": "7",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "8"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "fcgi"
+      },
+      {
+        "name": "fcbi",
+        "type": {
+          "kind": "vec",
+          "left": "7",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "8"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "fcbi"
+      },
+      {
+        "name": "bcri",
+        "type": {
+          "kind": "vec",
+          "left": "7",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "8"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "bcri"
+      },
+      {
+        "name": "bcgi",
+        "type": {
+          "kind": "vec",
+          "left": "7",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "8"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "bcgi"
+      },
+      {
+        "name": "bcbi",
+        "type": {
+          "kind": "vec",
+          "left": "7",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "8"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "bcbi"
+      },
+      {
+        "name": "d8_1i",
+        "type": {
+          "kind": "int",
+          "w": "5",
+          "lo": "0",
+          "hi": "16"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "d8_1i"
+      },
+      {
+        "name": "shift_hdni",
+        "type": {
+          "kind": "int",
+          "w": "4",
+          "lo": "0",
+          "hi": "15"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "shift_hdni"
+      },
+      {
+        "name": "st7735_resx",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "st7735_resx"
+      },
+      {
+        "name": "st7735_cs",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "buffer",
+        "key": "st7735_cs"
+      },
+      {
+        "name": "st7735_dc",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "st7735_dc"
+      },
+      {
+        "name": "st7735_scl",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "buffer",
+        "key": "st7735_scl"
+      },
+      {
+        "name": "st7735_sda",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "st7735_sda"
+      },
+      {
+        "name": "st7735_bl",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "st7735_bl"
+      },
+      {
+        "name": "st7735_reload",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "st7735_reload"
+      },
+      {
+        "name": "st7735_loadck",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "st7735_loadck"
+      },
+      {
+        "name": "st7735_spi_ok",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "buffer",
+        "key": "st7735_spi_ok"
+      }
+    ],
+    "params": false
+  },
+  "ws2812b_driver": {
+    "ports": [
+      {
+        "name": "ws2812bclk",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "ws2812bclk"
+      },
+      {
+        "name": "ws2812breset",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "ws2812breset"
+      },
+      {
+        "name": "ws2812b_loadck",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "ws2812b_loadck"
+      },
+      {
+        "name": "ws2812b_ledgrbdata",
+        "type": {
+          "kind": "vec",
+          "left": "23",
+          "right": "0",
+          "dir": "downto",
+          "elem": {
+            "kind": "bit",
+            "w": "1"
+          },
+          "w": "24"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "in",
+        "key": "ws2812b_ledgrbdata"
+      },
+      {
+        "name": "ws2812b_reload",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "ws2812b_reload"
+      },
+      {
+        "name": "ws2812b_emitter_ok",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "ws2812b_emitter_ok"
+      },
+      {
+        "name": "ws2812bout",
+        "type": {
+          "kind": "bit",
+          "w": "1"
+        },
+        "kind": "port",
+        "init": null,
+        "direction": "out",
+        "key": "ws2812bout"
+      }
+    ],
+    "params": false
+  }
+}

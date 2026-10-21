@@ -1,0 +1,118 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2010 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions
+# and other software and tools, and its AMPP partner logic
+# functions, and any output files from any of the foregoing
+# (including device programming or simulation files), and any
+# associated documentation or information are expressly subject
+# to the terms and conditions of the Altera Program License
+# Subscription Agreement, Altera MegaCore Function License
+# Agreement, or other applicable license agreement, including,
+# without limitation, that your use is for the sole purpose of
+# programming logic devices manufactured by Altera and sold by
+# Altera or its authorized distributors.  Please refer to the
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+# Date created = 16:09:31  July 20, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		E115_01_01_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C40Q240C8
+set_global_assignment -name TOP_LEVEL_ENTITY e115_01_01
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:09:31  JULY 20, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 240
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_106 -to ads1115_alert_rdy
+set_location_assignment PIN_112 -to ads1115_scl
+set_location_assignment PIN_110 -to ads1115_sda
+set_location_assignment PIN_69 -to d7led[7]
+set_location_assignment PIN_63 -to d7led[6]
+set_location_assignment PIN_56 -to d7led[5]
+set_location_assignment PIN_52 -to d7led[4]
+set_location_assignment PIN_50 -to d7led[3]
+set_location_assignment PIN_46 -to d7led[2]
+set_location_assignment PIN_44 -to d7led[1]
+set_location_assignment PIN_41 -to d7led[0]
+set_location_assignment PIN_164 -to ki[1]
+set_location_assignment PIN_166 -to ki[0]
+set_location_assignment PIN_160 -to ko[1]
+set_location_assignment PIN_161 -to ko[0]
+set_location_assignment PIN_133 -to koo
+set_location_assignment PIN_132 -to kxx
+set_location_assignment PIN_70 -to m7_0[8]
+set_location_assignment PIN_76 -to m7_0[7]
+set_location_assignment PIN_80 -to m7_0[6]
+set_location_assignment PIN_82 -to m7_0[5]
+set_location_assignment PIN_84 -to m7_0[4]
+set_location_assignment PIN_88 -to m7_0[3]
+set_location_assignment PIN_94 -to m7_0[2]
+set_location_assignment PIN_98 -to m7_0[1]
+set_location_assignment PIN_100 -to m7_0[0]
+set_location_assignment PIN_231 -to rd
+set_location_assignment PIN_145 -to s_reset
+set_location_assignment PIN_39 -to scano[7]
+set_location_assignment PIN_43 -to scano[6]
+set_location_assignment PIN_45 -to scano[5]
+set_location_assignment PIN_49 -to scano[4]
+set_location_assignment PIN_51 -to scano[3]
+set_location_assignment PIN_55 -to scano[2]
+set_location_assignment PIN_57 -to scano[1]
+set_location_assignment PIN_68 -to scano[0]
+set_location_assignment PIN_149 -to sclk
+set_location_assignment PIN_37 -to st7735_bl
+set_location_assignment PIN_21 -to st7735_cs
+set_location_assignment PIN_13 -to st7735_dc
+set_location_assignment PIN_6 -to st7735_resx
+set_location_assignment PIN_235 -to st7735_scl
+set_location_assignment PIN_239 -to st7735_sda
+set_location_assignment PIN_232 -to tx
+set_location_assignment PIN_143 -to ws2812bout
+set_location_assignment PIN_134 -to kout[4]
+set_location_assignment PIN_142 -to kout[3]
+set_location_assignment PIN_139 -to kout[2]
+set_location_assignment PIN_137 -to kout[1]
+set_location_assignment PIN_135 -to kout[0]
+set_location_assignment PIN_131 -to joystickxx
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+
+# Verilog copy of E115_01_01.
+set_global_assignment -name VERILOG_MACRO "SYNTHESIS=1"
+set_global_assignment -name VERILOG_FILE ads1115_16bit_i2c_driver.v
+set_global_assignment -name VERILOG_FILE e111_01_01_rom.v
+set_global_assignment -name VERILOG_FILE e115_01_01.v
+set_global_assignment -name VERILOG_FILE joystick_driver.v
+set_global_assignment -name VERILOG_FILE k4x4.v
+set_global_assignment -name VERILOG_FILE rs232_r4.v
+set_global_assignment -name VERILOG_FILE rs232_t4.v
+set_global_assignment -name VERILOG_FILE st7735_spi_tft_lcd_4w_driver_3.v
+set_global_assignment -name VERILOG_FILE ws2812b_driver.v
